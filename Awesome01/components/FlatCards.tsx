@@ -1,8 +1,7 @@
 import { Text, StyleSheet, View } from 'react-native'
-import React, { Component } from 'react'
+import React from 'react'
 
-export default class FlatCards extends Component {
-  render() {
+export default function FlatCards (){
     return (
       <View>
         <Text style = {styles.headingText}>Flat Cards</Text>
@@ -23,7 +22,7 @@ export default class FlatCards extends Component {
       </View>
     )
   }
-}
+
 
 const styles = StyleSheet.create({
     headingText:{
@@ -35,16 +34,19 @@ const styles = StyleSheet.create({
     container:{
         flex: 1,
         flexDirection: 'row',
-        flexWrap: 'wrap',
+        padding:8,
+        // justifyContent: 'space-between'
 
     },
     card : {
+        flex: 1,
         width: 100,
         height: 100,
         borderRadius: 4,
         margin: 8,
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        color:  '#000000'
     },
     cardOne: {
         backgroundColor: '#EF5354'
